@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, send_from_directory
-from libgen_scraper import search_libgen, download_book
+from libgen_scrapper import search_libgen, download_book
 import os
 
 app = Flask(__name__)
