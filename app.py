@@ -12,7 +12,7 @@ def index():
 
     return render_template("index.html")
 
-@app.route("/download/<filename>", methods=["GET"])
+@app.route("/download/<filename>", methods=["POST"])
 def download(filename):
     return send_from_directory(os.path.join(os.getcwd()), filename)
 
