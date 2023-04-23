@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Search for a book</h1>
-    <form action="{{ url_for('results') }}" method="post">
+    <form action="{{ url_for('results') }}" method="get">
         <label for="query">Book title or author's name:</label>
         <input type="text" name="query" id="query">
         <button type="submit">Search</button>

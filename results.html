@@ -8,10 +8,10 @@
 <body>
     <h1>Search Results</h1>
     <ol>
-        {% for result in results %}
+        {% for index, result in enumerate(results) %}
             <li>
                 <strong>{{ result[0] }}</strong> - {{ result[1] }}<br>
-                <a href="{{ url_for('download', filename=result[2]) }}">Download</a>
+                <a href="{{ url_for('download_book_route', book_index=index, query=request.args['query']) }}">Download</a>
             </li>
         {% endfor %}
     </ol>
