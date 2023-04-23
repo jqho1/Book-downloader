@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ol>
+        {% for result in results %}
+            <li>
+                <strong>{{ result[0] }}</strong> - {{ result[1] }}<br>
+                <a href="{{ url_for('download', filename=result[2]) }}">Download</a>
+            </li>
+        {% endfor %}
+    </ol>
+    <a href="/">Search again</a>
+</body>
+</html>
